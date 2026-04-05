@@ -31,10 +31,10 @@ The easiest way to test this project is via Google Colab:
 git clone https://github.com/Malaika01/AV-Barrier-Auto-Labeler-.git
 pip install -r requirements.txt
 python app.py --image data/sample_road.jpg --prompt "jersey barrier"
-
+```
 
 ## 📸 Demo Output
 
-![Demo Output](https://github.com/Malaika01/AV-Barrier-Auto-Labeler-/blob/main/assets/results.png)
+![Demo Output](https://raw.githubusercontent.com/Malaika01/AV-Barrier-Auto-Labeler-/main/assets/results.png)
 *GroundingDINO detects the barrier (bounding box) → 
 SAM generates the segmentation mask (purple overlay)*
