@@ -33,3 +33,8 @@ pip install -r requirements.txt
 python app.py --image data/sample_road.jpg --prompt "jersey barrier"
 
 
+## 📸 Demo Output
+
+![Demo Output](assets/results.png)
+*GroundingDINO detects the barrier (bounding box) → 
+SAM generates the segmentation mask (purple overlay)*

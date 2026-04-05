@@ -44,7 +44,7 @@ class AutoLabeler:
         )
 
         if len(boxes) == 0:
-            print(f"⚠️ No objects found for prompt: '{text_prompt}'")
+            print(f"No objects found for prompt: '{text_prompt}'")
             return image_source, None
 
         # 2. Segmentation (SAM)
@@ -89,7 +89,7 @@ def main():
         # Save Visual Result
         save_path = os.path.join(args.output, "annotated_" + os.path.basename(args.image))
         cv2.imwrite(save_path, annotated_frame)
-        print(f"✅ Visualization saved to {save_path}")
+        print(f" Visualization saved to {save_path}")
 
         # Export Labels (YOLO format)
         dataset = sv.DetectionDataset(
@@ -101,7 +101,7 @@ def main():
             images_directory_path=os.path.join(args.output, "images"),
             annotations_directory_path=os.path.join(args.output, "labels")
         )
-        print(f"📦 YOLO labels exported to {args.output}/labels")
+        print(f"YOLO labels exported to {args.output}/labels")
 
 if __name__ == "__main__":
     main()
